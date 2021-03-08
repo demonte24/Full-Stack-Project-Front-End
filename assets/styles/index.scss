@@ -1,1 +1,79 @@
 @import '~bootstrap/scss/bootstrap';
+#message {
+  font-family: fantasy;
+  color: darkgreen;
+  text-align: center;
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 15%;
+  padding: 5px;
+  width: 450px;
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: fantasy;
+  color: tan;
+  text-align: center;
+}
+
+h2 {
+  font-family: fantasy;
+  color: tan;
+
+}
+
+.button{
+  font-family: fantasy;
+}
+
+#sign-up {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#sign-in {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#change-password {
+  font-family: fantasy;
+  text-align: right;
+}
+
+#sign-out {
+  font-family: fantasy;
+  text-align: right;
+}
+
+#breeds-create {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#breeds-update {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#breeds-index {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#breeds-destroy {
+  font-family: fantasy;
+  text-align: center;
+}

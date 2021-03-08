@@ -20,6 +20,10 @@ $('#message').text('Welcome to PAWSOMEDogs!')
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#breeds-index').show()
+  $('#breeds-create').show()
+  $('#breeds-update').show()
+  $('#breeds-destroy').show()
 }
 
 const signInFailure = function(response) {
@@ -44,6 +48,10 @@ const signOutSuccess = function(response) {
     $('#sign-up').show()
     $('#change-password').hide()
     $('#sign-out').hide()
+    $('#breeds-index').hide()
+    $('#breeds-create').hide()
+    $('#breeds-update').hide()
+    $('#breeds-destroy').hide()
 }
 
 const signOutFailure = function(response) {

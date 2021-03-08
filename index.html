@@ -14,73 +14,86 @@
 
     <body>
       <h1>PAWSOME Dogs</h1>
+      <img src="https://unleashedjoy.com/wp-content/uploads/2014/12/Dog-Breeds.png" alt="all dogs" class="center">
       <main>
         <section class="auth section">
           <form id='sign-up'>
             <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
             <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
             <input type='password' name='credentials[password_confirmation]' placeholder='Enter Password Again' required>
-            <button>Sign Up</button>
+            <button class='button'>Sign Up</button>
           </form>
-
+            <hr>
           <form id='sign-in'>
             <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
             <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
-            <button>Sign in</button>
+            <button class='button'>Sign in</button>
           </form>
-          <hr>
+
 
           <form id='change-password'>
             <input type='password' name='passwords[old]' placeholder='Old password' required>
             <input type='password' name='passwords[new]' placeholder='New password' required>
-            <button>Change password</button>
+            <button class='button'>Change password</button>
+            <hr>
           </form>
-          <hr>
+
 
           <form id='sign-out'>
             <button>Sign Out</button>
+            <hr>
           </form>
         </section>
 
       </section>
       <section id="breeds-section">
 
-        <h2>Add A Breed</h2>
+
         <form id='breeds-create'>
-           <input type='text' name='breed[title]' placeholder='Enter Title Here' required>
-           <input type='text' name='book[country]' placeholder='Enter Country Here' required>
-           <button>Add Breed</button>
+           <h2>Add A Breed</h2>
+           <input type='text' name='breed[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='breed[country]' placeholder='Enter Country Here' required>
+           <button class='button'>Add Breed</button>
+           <hr>
         </form>
         <div id='breeds-create-message'></div>
-        <hr>
-        <h2>Update A Breed</h2>
+
+
         <form id='breeds-update'>
+           <h2>Update A Breed</h2>
            <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
-           <input type='text' name='breed[country]' placeholder='Enter Title Here' required>
-           <button>Update Breed</button>
+           <input type='text' name='breed[country]' placeholder='Enter Name Here' required>
+           <button class='button'>Update Breed</button>
+           <hr>
         </form>
         <div id='breeds-update-message'></div>
-        <hr>
-        <h2>Get A Breed</h2>
+
+         <!-- <h2>Get A Breed</h2>
         <form id='breeds-show'>
           <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
           <button>Get Breed</button>
+        </form> -->
+         <hr>
+         <form id='breeds-index'>
+           <h2>Get All Breeds</h2>
+           <button class='button'>Get All Breeds</button>
+           <hr>
         </form>
-        <hr>
-        <h2>Get All Breeds</h2>
-        <button id='breeds-index'>Get All Breeds</button>
-        <hr>
-        <h2>Remove A Breed</h2>
+
+
         <form id='breeds-destroy'>
+          <h2>Remove A Breed</h2>
           <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
-          <button>Remove Breed</button>
+          <button class='button'>Remove Breed</button>
+          <hr>
         </form>
         <div id='breeds-destroy-message'></div>
-        <hr>
+
       </section>
 
         <section>
           <div id='message'></div>
+          <div id='breeds-display'></div>
         </section>
       </main>
     </body>
