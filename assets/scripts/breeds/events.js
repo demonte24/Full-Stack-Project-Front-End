@@ -10,24 +10,24 @@ const onIndexbreeds = function () {
     .catch(ui.onError)
 }
 //
-// const onDestroybreed = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   // console.log('breedData is', formData)
-//   api.destroybreed(formData.breed.id)
-//     .then(ui.onDeleteSuccess)
-//     .catch(ui.onError)
-// }
-//
-// const onUpdatebreed = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   api.update(formData.breed.id, formData)
-//     .then(ui.onUpdateSuccess)
-//     .catch(ui.onError)
-// }
+const onDestroybreed = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  // console.log('breedData is', formData)
+  api.destroyBreed(formData.breed.id)
+    .then(ui.onDeleteSuccess)
+    .catch(ui.onError)
+}
+
+const onUpdatebreed = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  api.updateBreed(formData.breed.id, formData)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onError)
+}
 //
 //
 const onCreatebreed = function (event) {
@@ -39,32 +39,32 @@ const onCreatebreed = function (event) {
     .catch(ui.onError)
 }
 //
-// const onDynamicDestroybreed = function (event) {
-//   event.preventDefault()
-//   const destroyButton = event.target
-//   const id = $(deleteButton).data('id')
-//   api.destroybreed(id)
-//     .then(ui.onDeleteSuccess)
-//     .catch(ui.onError)
-// }
-//
-//
-// const onDynamicUpdatebreed = function (event) {
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   const id = $(form).data('id')
-//   api.update(id, formData)
-//     .then(ui.onUpdateSuccess)
-//     .catch(ui.onError)
-// }
+const onDynamicDestroybreed = function (event) {
+  event.preventDefault()
+  const destroyButton = event.target
+  const id = $(deleteButton).data('id')
+  api.destroyBreed(id)
+    .then(ui.onDeleteSuccess)
+    .catch(ui.onError)
+}
+
+
+const onDynamicUpdatebreed = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  const id = $(form).data('id')
+  api.updateBreed(id, formData)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onError)
+}
 //
 //
 module.exports = {
   onIndexbreeds,
-  // onDestroybreed,
-  // onUpdatebreed,
+  onDestroybreed,
+  onUpdatebreed,
   onCreatebreed,
-  // onDynamicDestroybreed,
-  // onDynamicUpdatebreed
+  onDynamicDestroybreed,
+  onDynamicUpdatebreed
 }

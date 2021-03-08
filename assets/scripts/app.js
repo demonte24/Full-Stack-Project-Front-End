@@ -19,15 +19,14 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#breeds-index').on('click', breedEvents.onIndexbreeds)
-  // $('#breeds-destroy').on('submit', breedEvents.onDestroybreed)
-  // // select our #breeds-update form, when it is submitted run onUpdatebreed
-  // $('#breeds-update').on('submit', breedEvents.onUpdatebreed)
+  $('#breeds-destroy').on('submit', breedEvents.onDestroybreed)
+  $('#breeds-update').on('submit', breedEvents.onUpdatebreed)
   $('#breeds-create').on('submit', breedEvents.onCreatebreed)
   // // our dynamic destroy buttons will not initially be on the screen
   // // so we need to target their container element `#breeds-display` and then
   // // filter for our destroy buttons `.breeds-destroy-dynamic` inside of the container
-  // $('#breeds-display').on('click', '.breeds-destroy-dynamic', breedEvents.onDynamicDestroybreed)
-  // // so we need to target their container element `#breeds-display` and then
-  // // filter for our update forms `.breeds-update-dynamic` inside of the container
-  // $('#breeds-display').on('submit', '.breeds-update-dynamic', breedEvents.onDynamicUpdatebreed)
+  $('#breeds-display').on('click', '.breeds-destroy-dynamic', breedEvents.onDynamicDestroybreed)
+  // so we need to target their container element `#breeds-display` and then
+  // filter for our update forms `.breeds-update-dynamic` inside of the container
+  $('#breeds-display').on('submit', '.breeds-update-dynamic', breedEvents.onDynamicUpdatebreed)
 })

@@ -12,22 +12,27 @@ const index = function () {
 }
 //
 //
-// const destroyBreed = function (id) {
-//   return  $.ajax({
-//     method: 'DELETE',
-//     url: config.apiUrl + '/breeds/' + id
-//   })
-// }
-//
-// const updateBreed = function (id, formData) {
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiUrl + '/breeds/' + id,
-//     data: formData
-//   })
-// }
-//
-//
+const destroyBreed = function (id) {
+  return  $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/breeds/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const updateBreed = function (id, formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/breeds/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: formData
+  })
+}
+
 const createBreed = function (formData) {
   // const breed = formData.breed
   return $.ajax({
@@ -43,7 +48,7 @@ const createBreed = function (formData) {
 //
 module.exports = {
   index,
-  // destroyBreed,
-  // updateBreed,
+  destroyBreed,
+  updateBreed,
   createBreed
 }
