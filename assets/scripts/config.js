@@ -2,8 +2,8 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://fierce-mountain-14370.herokuapp.com/',
-  development: 'http://localhost:4741' 
+  production: 'https://fierce-mountain-14370.herokuapp.com',
+  development: 'http://localhost:4741'
 }
 
 if (window.location.hostname === 'localhost') {
