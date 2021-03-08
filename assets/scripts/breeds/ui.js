@@ -6,10 +6,7 @@ let breedsHtml = ''
       <h4>Name: ${breed.name}</h4>
       <p>Country: ${breed.country}</p>
       <p>ID: ${breed._id}</p>
-      <button class='breeds-delete-dynamic' data-id=${breed._id}>
-          Delete breed
-        </button>
-        <hr>
+      
 
         <form class='breeds-update-dynamic' data-id=${breed._id}>
           <input type='text' name='breed[name]' placeholder='Enter Name Here' required>

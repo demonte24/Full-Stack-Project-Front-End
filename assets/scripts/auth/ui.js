@@ -24,6 +24,7 @@ $('#message').text('Welcome to PAWSOMEDogs!')
   $('#breeds-create').show()
   $('#breeds-update').show()
   $('#breeds-destroy').show()
+    $('#breeds-display').show()
 }
 
 const signInFailure = function(response) {
@@ -42,7 +43,7 @@ const changePasswordFailure = function(response) {
 
 const signOutSuccess = function(response) {
 
-  $('#message').text('Thank you for your input on our PAWFriends!')
+  $('#message').text('Thank you for your input on our PawFriends!')
     $('#sign-out').trigger('reset')
     $('#sign-in').show()
     $('#sign-up').show()
@@ -52,6 +53,7 @@ const signOutSuccess = function(response) {
     $('#breeds-create').hide()
     $('#breeds-update').hide()
     $('#breeds-destroy').hide()
+    $('#breeds-display').hide()
 }
 
 const signOutFailure = function(response) {

@@ -34,7 +34,6 @@ const updateBreed = function (id, formData) {
 }
 
 const createBreed = function (formData) {
-  // const breed = formData.breed
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/breeds',

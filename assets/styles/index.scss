@@ -7,7 +7,7 @@
 #breeds-display {
   font-family: fantasy;
   color: darkgreen;
-  text-align: center;  
+  text-align: center;
 }
 img {
   border: 1px solid #ddd;
@@ -41,6 +41,23 @@ h2 {
 
 .button{
   font-family: fantasy;
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: blue}
+
+.button:active {
+  background-color: blue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 #sign-up {
@@ -61,6 +78,13 @@ h2 {
 #sign-out {
   font-family: fantasy;
   text-align: right;
+}
+.Signout:hover {background-color: blue}
+
+.Signout:active {
+  background-color: blue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 #breeds-create {
