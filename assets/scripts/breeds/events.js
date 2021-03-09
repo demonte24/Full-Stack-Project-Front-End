@@ -14,9 +14,8 @@ const onDestroybreed = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  // console.log('breedData is', formData)
   api.destroyBreed(formData.breed.id)
-    .then(ui.onDeleteSuccess)
+    .then(ui.onDestroySuccess)
     .catch(ui.onError)
 }
 

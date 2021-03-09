@@ -10,8 +10,7 @@ const index = function () {
     }
   })
 }
-//
-//
+
 const destroyBreed = function (id) {
   return  $.ajax({
     method: 'DELETE',
