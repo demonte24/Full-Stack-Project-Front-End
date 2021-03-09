@@ -9,7 +9,7 @@ const signUpSuccess = function(response) {
 }
 
 const signUpFailure = function(response) {
-  $('#message').text('Sign up failed, try again')
+  $('#message').text('Sign in failed, try again')
 }
 
 const signInSuccess = function(response) {
