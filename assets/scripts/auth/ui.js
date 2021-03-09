@@ -9,7 +9,7 @@ const signUpSuccess = function(response) {
 }
 
 const signUpFailure = function(response) {
-  $('#message').text('Sign in failed, try again')
+  $('#message').text('Sign up failed, try again')
 }
 
 const signInSuccess = function(response) {
@@ -29,7 +29,7 @@ $('#message').text('Welcome to PAWSOMEDogs!')
 
 const signInFailure = function(response) {
   $('#message').text('Sign In failed, try again')
-  console.log('heres the message')
+  
 }
 
 const changePasswordSuccess = function(response) {
