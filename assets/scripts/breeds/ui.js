@@ -17,6 +17,12 @@ let breedsHtml = ''
     `
   })
   $('#breeds-display').html(breedsHtml)
+  $('#message').text('Here is your list of Beeds!')
+  $('form').trigger('reset')
+}
+const onIndexFailure = function () {
+  $('#error-message').text('Do not forget to add some Breeds first!')
+  $('form').trigger('reset')
 }
 
 const onDestroySuccess = function () {
@@ -25,10 +31,18 @@ const onDestroySuccess = function () {
   $('#breeds-destroy-message').addClass('success')
   $('form').trigger('reset')
 }
+const onDestroyFailure = function () {
+  $('#error-message').text('Destroy failed Try Again!')
+  $('form').trigger('reset')
+}
 
 const onUpdateSuccess = function (responseData) {
   $('#message').text('You successfully updated the breed')
   $('#breeds-display').text('breeds have changed! Click "Get All breeds" again to see all the breeds.')
+  $('form').trigger('reset')
+}
+const onUpdateFailure = function () {
+  $('#error-message').text('Update failed Try Again!')
   $('form').trigger('reset')
 }
 
@@ -38,17 +52,24 @@ const onCreateSuccess = function () {
   $('#message').addClass('success')
   $('form').trigger('reset')
 }
-//
-const onError = function (err) {
-  $('#message').text('Something went wrong, please try again.')
-  $('#message').addClass('failure')
+const onCreateFailure = function () {
+  $('#error-message').text('Create failed Try Again!')
   $('form').trigger('reset')
 }
+// const onError = function (err) {
+//   $('#error-message').text('Something went wrong, please try again.')
+//   $('#message').addClass('failure')
+//   $('form').trigger('reset')
+// }
 //
 module.exports = {
   onIndexSuccess,
   onDestroySuccess,
   onUpdateSuccess,
   onCreateSuccess,
-  onError
+  onIndexFailure,
+  onDestroyFailure,
+  onUpdateFailure,
+  onCreateFailure,
+  // onError
 }

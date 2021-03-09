@@ -9,7 +9,8 @@ const signUpSuccess = function(response) {
 }
 
 const signUpFailure = function(response) {
-  $('#message').text('Sign up failed, try again')
+  $('#error-message').text('Sign up failed, try again')
+  $('form').trigger('reset')
 }
 
 const signInSuccess = function(response) {
@@ -24,12 +25,12 @@ $('#message').text('Welcome to PAWSOMEDogs!')
   $('#breeds-create').show()
   $('#breeds-update').show()
   $('#breeds-destroy').show()
-    $('#breeds-display').show()
+  $('#breeds-display').show()
 }
 
 const signInFailure = function(response) {
-  $('#message').text('Sign In failed, try again')
-  
+  $('#error-message').text('Sign In failed, try again')
+  $('form').trigger('reset')
 }
 
 const changePasswordSuccess = function(response) {
@@ -38,7 +39,8 @@ const changePasswordSuccess = function(response) {
 }
 
 const changePasswordFailure = function(response) {
-  $('#message').text('Change Password failed, try again')
+  $('#error-message').text('Change Password failed, try again')
+  $('form').trigger('reset')
 }
 
 const signOutSuccess = function(response) {
@@ -57,7 +59,8 @@ const signOutSuccess = function(response) {
 }
 
 const signOutFailure = function(response) {
-  $('#message').text('Sign Out failed, try again')
+  $('#error-message').text('Sign Out failed, try again')
+  $('form').trigger('reset')
 }
 
 module.exports = {
