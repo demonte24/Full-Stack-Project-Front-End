@@ -4,7 +4,7 @@ let dogsHtml = ''
   dogs.forEach(dog => {
     dogsHtml += `
       <h4>Name: ${dog.name}</h4>
-      <p>Country: ${dog.breed}</p>
+      <p>Breed: ${dog.breed}</p>
       <p>ID: ${dog._id}</p>
 
 

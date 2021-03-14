@@ -21,11 +21,17 @@ $('#message').text('Welcome to PAWSOMEDogs!')
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+
   $('#breeds-index').show()
   $('#breeds-create').show()
   $('#breeds-update').show()
   $('#breeds-destroy').show()
   $('#breeds-display').show()
+
+  $('#dogs-index').show()
+  $('#dogs-create').show()
+  $('#dogs-update').show()
+  $('#dogs-destroy').show()
 }
 
 const signInFailure = function(response) {
