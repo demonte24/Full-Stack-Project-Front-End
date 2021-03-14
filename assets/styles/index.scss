@@ -14,6 +14,11 @@
   color: darkgreen;
   text-align: center;
 }
+#dogs-display {
+  font-family: fantasy;
+  color: darkgreen;
+  text-align: center;
+}
 img {
   border: 5px solid #ddd;
   border-radius: 15%;
@@ -108,6 +113,27 @@ h2 {
 }
 
 #breeds-destroy {
+  font-family: fantasy;
+  text-align: center;
+}
+
+
+#dogs-create {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#dogs-update {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#dogs-index {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#dogs-destroy {
   font-family: fantasy;
   text-align: center;
 }

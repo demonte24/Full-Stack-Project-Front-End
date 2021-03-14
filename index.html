@@ -46,6 +46,7 @@
         </section>
 
       </section>
+
       <section id="breeds-section">
         <form id='breeds-index'>
           <h2>Get All Breeds</h2>
@@ -73,12 +74,6 @@
         </form>
         <div id='breeds-update-message'></div>
 
-         <!-- <h2>Get A Breed</h2>
-        <form id='breeds-show'>
-          <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
-          <button>Get Breed</button>
-        </form> -->
-
 
         <form id='breeds-destroy'>
           <h2>Remove A Breed</h2>
@@ -90,10 +85,49 @@
 
       </section>
 
+      <section id="dogs-section">
+        <form id='dogs-index'>
+          <h2>Get All Dogs</h2>
+          <button class='button'>Get All Dogs</button>
+          <hr>
+       </form>
+
+        <form id='dogs-create'>
+           <h2>Add A Dog</h2>
+           <input type='text' name='dog[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='dog[breed]' placeholder='Enter Breed Here' required>
+           <button class='button'>Add Dog</button>
+           <hr>
+        </form>
+        <div id='dogs-create-message'></div>
+
+
+        <form id='dogs-update'>
+           <h2>Update A Dog</h2>
+           <input type='text' name='dog[id]' placeholder='Enter ID Here' required>
+           <input type='text' name='dog[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='dog[breed]' placeholder='Enter Breed Here' required>
+           <button class='button'>Update Dog</button>
+           <hr>
+        </form>
+        <div id='dogs-update-message'></div>
+
+
+        <form id='dogs-destroy'>
+          <h2>Remove A Dog</h2>
+          <input type='text' name='dog[id]' placeholder='Enter ID Here' required>
+          <button class='button'>Remove Dog</button>
+          <hr>
+        </form>
+        <div id='dogs-destroy-message'></div>
+
+      </section>
+
         <section>
           <div id='message'></div>
           <div id='error-message'></div>
           <div id='breeds-display'></div>
+          <div id='dogs-display'></div>
         </section>
       </main>
     </body>

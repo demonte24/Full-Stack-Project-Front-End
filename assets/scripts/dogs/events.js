@@ -3,57 +3,54 @@ const ui= require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
 
-const onIndexbreeds = function () {
+const onIndexdogs = function () {
   event.preventDefault()
   api.index()
     .then(ui.onIndexSuccess)
     .catch(ui.onError)
 }
 //
-const onDestroybreed = function (event) {
+const onDestroydog = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.destroyBreed(formData.breed.id)
+  api.destroyDog(formData.dog.id)
     .then(ui.onDestroySuccess)
     .catch(ui.onError)
 }
 
-const onUpdatebreed = function (event) {
+const onUpdatedog = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.updateBreed(formData.breed.id, formData)
+  api.updateDog(formData.dog.id, formData)
     .then(ui.onUpdateSuccess)
     .catch(ui.onError)
 }
-//
-//
-const onCreatebreed = function (event) {
+
+const onCreatedog = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  api.createBreed(formData)
+  api.createDog(formData)
     .then(ui.onCreateSuccess)
     .catch(ui.onError)
 }
 
-
-const onDynamicUpdatebreed = function (event) {
+const onDynamicUpdatedog = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
   const id = $(form).data('id')
-  api.updateBreed(id, formData)
+  api.updateDog(id, formData)
     .then(ui.onUpdateSuccess)
     .catch(ui.onError)
 }
-//
-//
+
 module.exports = {
-  onIndexbreeds,
-  onDestroybreed,
-  onUpdatebreed,
-  onCreatebreed,
-  onDynamicUpdatebreed
+  onIndexdogs,
+  onDestroydog,
+  onUpdatedog,
+  onCreatedog,
+  onDynamicUpdatedog
 }
