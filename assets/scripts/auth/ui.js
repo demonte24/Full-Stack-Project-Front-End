@@ -57,11 +57,18 @@ const signOutSuccess = function(response) {
     $('#sign-up').show()
     $('#change-password').hide()
     $('#sign-out').hide()
+
     $('#breeds-index').hide()
     $('#breeds-create').hide()
     $('#breeds-update').hide()
     $('#breeds-destroy').hide()
     $('#breeds-display').hide()
+
+    $('#dogs-index').hide()
+    $('#dogs-create').hide()
+    $('#dogs-update').hide()
+    $('#dogs-destroy').hide()
+    $('#dogs-display').hide()
 }
 
 const signOutFailure = function(response) {
