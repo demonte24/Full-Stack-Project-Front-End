@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>PAWSOME Dogs</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <h1>PAWSOME Dogs</h1>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://unleashedjoy.com/wp-content/uploads/2014/12/Dog-Breeds.png" alt="all dogs" class="center">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i1.wp.com/germanshepherddoghq.com/wp-content/uploads/2020/05/German-Shepherd-other-dogs-2.jpg?resize=980%2C653" alt="all dogs" class="center">
+        </div>
+      </div>
+    </div>
+
+      <main>
+        <section class="auth section">
+          <form id='sign-up'>
+            <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+            <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+            <input type='password' name='credentials[password_confirmation]' placeholder='Enter Password Again' required>
+            <button class='button'>Sign Up</button>
+          </form>
+            <hr>
+          <form id='sign-in'>
+            <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+            <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+            <button class='button'>Sign in</button>
+          </form>
+
+
+          <form id='change-password'>
+            <input type='password' name='passwords[old]' placeholder='Old password' required>
+            <input type='password' name='passwords[new]' placeholder='New password' required>
+            <button class='button'>Change password</button>
+            <hr>
+          </form>
+
+
+          <form id='sign-out'>
+            <button class='Signout'>Sign Out</button>
+            <hr>
+          </form>
+        </section>
+
+      </section>
+
+      <section id="breeds-section">
+        <form id='breeds-index'>
+          <h2>Get All Breeds</h2>
+          <button class='button'>Get All Breeds</button>
+          <hr>
+       </form>
+
+        <form id='breeds-create'>
+           <h2>Add A Breed</h2>
+           <input type='text' name='breed[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='breed[country]' placeholder='Enter Country Here' required>
+           <button class='button'>Add Breed</button>
+           <hr>
+        </form>
+        <div id='breeds-create-message'></div>
+
+
+        <form id='breeds-update'>
+           <h2>Update A Breed</h2>
+           <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
+           <input type='text' name='breed[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='breed[country]' placeholder='Enter Country Here' required>
+           <button class='button'>Update Breed</button>
+           <hr>
+        </form>
+        <div id='breeds-update-message'></div>
+
+
+        <form id='breeds-destroy'>
+          <h2>Remove A Breed</h2>
+          <input type='text' name='breed[id]' placeholder='Enter ID Here' required>
+          <button class='button'>Remove Breed</button>
+          <hr>
+        </form>
+        <div id='breeds-destroy-message'></div>
+
+      </section>
+
+      <section id="dogs-section">
+        <form id='dogs-index'>
+          <h2>Get All Dogs</h2>
+          <button class='button'>Get All Dogs</button>
+          <hr>
+       </form>
+
+        <form id='dogs-create'>
+           <h2>Add A Dog</h2>
+           <input type='text' name='dog[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='dog[breed]' placeholder='Enter Breed Here' required>
+           <button class='button'>Add Dog</button>
+           <hr>
+        </form>
+        <div id='dogs-create-message'></div>
+
+
+        <form id='dogs-update'>
+           <h2>Update A Dog</h2>
+           <input type='text' name='dog[id]' placeholder='Enter ID Here' required>
+           <input type='text' name='dog[name]' placeholder='Enter Name Here' required>
+           <input type='text' name='dog[breed]' placeholder='Enter Breed Here' required>
+           <button class='button'>Update Dog</button>
+           <hr>
+        </form>
+        <div id='dogs-update-message'></div>
+
+
+        <form id='dogs-destroy'>
+          <h2>Remove A Dog</h2>
+          <input type='text' name='dog[id]' placeholder='Enter ID Here' required>
+          <button class='button'>Remove Dog</button>
+          <hr>
+        </form>
+        <div id='dogs-destroy-message'></div>
+
+      </section>
+
+        <section>
+          <div id='message'></div>
+          <div id='error-message'></div>
+          <div id='breeds-display'></div>
+          <div id='dogs-display'></div>
+        </section>
+      </main>
+    </body>
+</html>
