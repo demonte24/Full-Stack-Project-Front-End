@@ -10,7 +10,7 @@ const signUpSuccess = function(response) {
 
 const signUpFailure = function(response) {
   $('#error-message').text('Sign up failed, try again')
-  $('form').trigger('reset')
+  $('#error-message').trigger('reset')
 }
 
 const signInSuccess = function(response) {
